@@ -4,12 +4,13 @@ len_str = len(string_number)
 bigest = 0
 
 for i in range(len_str):
+    adjNum = string_number[i:i + n_adjDigts]
     if len_str - i == n_adjDigts:
-        if int(string_number[i:i + n_adjDigts]) > int(bigest):
-            bigest = string_number[i:i + n_adjDigts]
+        if int(adjNum) > int(bigest):
+            bigest = adjNum
         break
-    if int(string_number[i:i + n_adjDigts]) > int(bigest):
-        bigest = string_number[i:i + n_adjDigts]
+    if int(adjNum) > int(bigest):
+        bigest = adjNum
 
 
 def product(*args):
